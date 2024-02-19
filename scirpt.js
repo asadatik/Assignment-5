@@ -68,9 +68,11 @@ let applied  =  document.getElementById("Apply-korun") ;
       if(  totalTaka>=2200){
        if( couponDin === "NEW15"){
         let grandTotal = document.getElementById("grandTotal");
-            let  discountPrice = totalTaka *  1.5 ;
+            let  discount = totalTaka * .15 ;
+             let discountPrice = totalTaka - discount ;
             grandTotal.innerText = discountPrice;
-          
+          let hiddenpart = document.getElementById("hiddenpart");
+          hiddenpart.classList.add("hidden");
        } else {
           alert("invalid coupon");
        }
@@ -79,8 +81,8 @@ let applied  =  document.getElementById("Apply-korun") ;
       } else {              
           alert (      "please ,at least buy 4 tickets "            );
       }
-      
 
+  
 
  }    )
 
