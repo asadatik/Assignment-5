@@ -29,12 +29,15 @@
          li.appendChild(p1);
          li.appendChild(p2);   
          li.appendChild(p3);
-       selectedseatcontainer.appendChild(li);
+      if(  count < 5      ){
+        selectedseatcontainer.appendChild(li);
 
+      }
         if(count>=5) {
-           cards.removeEventListener("click");
+           cards.removeEventListener("click", function(){});
            cards.classlist.remove("bg-[#1DD100]");
-
+          //  alert( "sorry .A  person"        );
+          //  return ;
           
            
         } 
