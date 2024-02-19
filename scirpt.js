@@ -10,12 +10,12 @@
        count = count +1 ;    
         avalableSet = avalableSet-1 ; 
         value = value+550 ;
-         
+        
         // append section///
         let seatNumber = event.target.innerText ;
         let Economoy = "Economoy";
          let money = 550 ;
-            
+          
         let selectedseatcontainer = document.getElementById("selected-seat-container");
          let li = document.createElement("li");
         
@@ -30,9 +30,9 @@
          li.appendChild(p2);   
          li.appendChild(p3);
       if(  count < 5      ){
-        selectedseatcontainer.appendChild(li);
+        selectedseatcontainer.appendChild(li);  } 
 
-      }
+      
         if(count>=5) {
            cards.removeEventListener("click", function(){});
            cards.classlist.remove("bg-[#1DD100]");
