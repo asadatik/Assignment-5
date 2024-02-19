@@ -46,15 +46,9 @@
       setInnerText("selectedSet" , count )
       setInnerText("AvailableSET" , avalableSet  )
       setInnerText( "grandTotal" ,   value                 )
-        
-     
 
-    }  )
-                    
-  }
-
-
-
+    }  ) }
+ 
 
 
 // set inner text function
@@ -63,4 +57,30 @@ function setInnerText  ( id , value     )
   
 
 
+                   
+// coupon function//
+let applied  =  document.getElementById("Apply-korun") ;
+    applied.addEventListener( "click", function (  ) {
+      let totalTaka = document.getElementById("totalTaka").innerText;
+      console.log(totalTaka) ;
+     let couponDin = document.getElementById("coupon-din").value ;
+        console.log(   couponDin     )
+      if(  totalTaka>=2200){
+       if( couponDin === "NEW15"){
+        let grandTotal = document.getElementById("grandTotal");
+            let  discountPrice = totalTaka *  1.5 ;
+            grandTotal.innerText = discountPrice;
+          
+       } else {
+          alert("invalid coupon");
+       }
+                                 
+        
+      } else {              
+          alert (      "please ,at least buy 4 tickets "            );
+      }
+      
+
+
+ }    )
 
