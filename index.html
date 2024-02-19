@@ -128,9 +128,9 @@
                   <h2>Greenline Paribahan</h2>
               
                  </div>
-                  <div  class="w-36 rounded-xl  h-10  py-2 bg-[#1DD10026] text-lime-500 flex ">
+                  <div  class="w-40 rounded-xl gap-1   h-12  py-2 bg-[#1DD10026] text-lime-500 flex ">
                         <img src="images/seat-green.png" alt="">  
-                       <h3 class="font-medium text-xl " >  40 Seats left </h3>
+                       <h3 class="font-medium text-xl  " > <span class=" text-[#1DD100] text-2xl font-bold " id="AvailableSET" > 8 </span>  Seats left </h3>
                   </div>
            </div>
             <div  class="flex justify-between">
@@ -161,7 +161,7 @@
          
        </div>
      
-      <div  class="  grid  justify-center gap-0 bg-slate-100 rounded-3xl "    >
+      <div  class="  grid  justify-center gap-0 bg-slate-100 rounded-3xl p-8 "    >
        <!-- 550 Taka    part       -->
        
        <img src="images/fare.png" alt="">
@@ -195,7 +195,7 @@
              </div>
              <div class="flex gap-2 "   >
                   <img src="images/seat-green-filled.png" alt="">
-                  <p class="text-[#1DD100] text-xl   font-medium      " >Selected</p>
+                  <p class="text-[#1DD100] text-xl   font-medium   " >Selected</p>
              </div>
                  
             </div>
@@ -205,23 +205,24 @@
        <div class="flex justify-end" >
            <div class="bg-[#0307121A] px-10 py-4 rounded-xl "  >     <img src="images/wheel.svg" alt="">    </div>
        </div>
-    <div class="space-y-7"  >
+    <div class="space-y-7 mt-6 "  >
         
        <!-- seat   1st col -->
        <div class="flex   justify-between     "  >
        
         <div  class="flex gap-10 " > 
-          <p  class="font-medium  text-xl  "  >A</p>    <button class="btn w-24   "  >   A1     </button><button  class="btn w-24  ">  A2  </button> 
+          <p  class="font-medium  text-xl  "  >A</p>    <button  class="btn btn-card  w-24 text-xl rounded-xl "  >   A1     </button><button  class="btn w-24 btn-card text-xl  rounded-xl "> A2  </button> 
         </div>
-          <div class="flex gap-10 " >     <button class="btn w-24  "  >   A3     </button><button class="btn  w-24 " >  A4  </button>        </div>
+          <div class="flex gap-10 " >     <button  class="btn w-24 btn-card text-xl  rounded-xl "  >   A3    </button><button  class="btn  w-24 text-xl btn-card rounded-xl" >  A4 </button>        </div>
+          
       </div>  
        <!-- SEAT 2ND COL -->
       <div class="flex justify-between"  >
        
         <div  class="flex gap-10 " > 
-          <p class="font-medium  text-xl  "   >B</p>    <button class="btn  w-24  "  >   B1     </button><button  class="btn w-24   ">  B2  </button> 
+          <p class="font-medium  text-xl  "   >B</p>    <button   class="btn text-xl w-24 btn-card rounded-xl "  >  B1      </button><button  class="btn w-24 btn-card text-xl rounded-xl ">  B2 </button> 
         </div>
-          <div class="flex gap-10 " >     <button class="btn  w-24 "  >   B3     </button><button class="btn w-24   " >  B4  </button>        </div>
+          <div class="flex gap-10 " >     <button class="btn  w-24 btn-card rounded-xl text-xl "  >    B3   </button><button class="btn text-xl w-24 btn-card rounded-xl " >  B4 </button>        </div>
       </div>  
 
        <!-- ending left side -->
@@ -237,22 +238,48 @@
     <hr class="  my-6 ">
     <div>
          <div   class="flex  justify-between  font-medium   text-lg        " >
-               <p>   Seat    </p>
+               <p>    Seat  <span  class="bg-[#1DD100] rounded-xl p-2 text-xl text-white " id="selectedSet" >0</span>  </p>
                 <p>   Class       </p>
                 <p>    Price   </p>
- 
+
          </div>
+           <hr  class="my-4" > 
+      </div>
+   <!--set counting ---------------------------------------------- -->
+     <div>
+       <p>
+          
+       </p>
+     </div>
+         
+
+   
+     <hr class="my-4" >
+     <!-- Total Price -->
+    <div class="flex justify-between  " >
+         <p class="font-medium text-xl" >Total Price</p>
+         <hr class="my-4" >  
+         <p class="font-medium text-xl"  >  BDT <span id="totalTaka" >0</span>    </p>
+     </div>
+     <!-- coupon input  -->
+     <div class="my-6" >
+      <label class="input input-bordered flex items-center gap-2  ">
+        <input type="text" class="grow" placeholder="Have any coupon?" />
+          <button id="Apply-korun" class="btn h-3 text-lg font-semibold bg-[#1DD100] text-white ">Apply </button>
+      </label>
+     </div>
+     <!-- gand total -->
+      
+        <div class="flex justify-between  " >
+          <p class="font-medium text-xl" >Grand Total</p>
+          <p class="font-medium text-xl"  >  BDT <span id="grandTotal" >0</span>    </p>
+           
+
+    
 
 
-    </div>
-
-
-
-
-
-
- </div>
-
+   </div>
+  
 
 
 
@@ -265,13 +292,17 @@
 
 
 
-
   </section>
 
-
+  
 
 
 </main>
+ <footer class="h-48">
+
+
+
+ </footer>
     <script src="scirpt.js"></script>
 </body>
 </html>
