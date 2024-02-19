@@ -9,18 +9,33 @@
     //  set the inner text of set number
        count = count +1 ;    
         avalableSet = avalableSet-1 ; 
-        value = value+500 ;
+        value = value+550 ;
          
         // append section///
         let seatNumber = event.target.innerText ;
-           
-      
+        let Economoy = "Economoy";
+         let money = 550 ;
+            
+        let selectedseatcontainer = document.getElementById("selected-seat-container");
+         let li = document.createElement("li");
         
-               
-        
-        if(  count>=5) {
-           cards.removeEventListener("click")
-           cards.classlist.remove("bg-[#1DD100]")
+         let p1 = document.createElement("p");
+         p1.innerText = seatNumber;
+         let p2 = document.createElement("p");
+         p2.innerText = Economoy ;
+
+         let p3 = document.createElement("p");
+         p3.innerText = money ;
+         li.appendChild(p1);
+         li.appendChild(p2);   
+         li.appendChild(p3);
+       selectedseatcontainer.appendChild(li);
+
+        if(count>=5) {
+           cards.removeEventListener("click");
+           cards.classlist.remove("bg-[#1DD100]");
+
+          
            
         } 
         event.target.style.backgroundColor ="#1DD100"
